@@ -1,5 +1,3 @@
 #ignores specific file directories
 /node_modules
 /platforms
-
-node_modules
