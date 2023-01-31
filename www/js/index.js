@@ -16,20 +16,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { WebUntis } from "webuntis"
-document.addEventListener("deviceready", onDeviceReady, false)
+import { WebUntis } from "webuntis";
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-  console.log("Running cordova-" + cordova.platformId + "@" + cordova.version)
-  document.getElementById("deviceready").classList.add("ready")
+	console.log("Running cordova-" + cordova.platformId + "@" + cordova.version);
+	document.getElementById("deviceready").classList.add("ready");
 }
 const untis = new WebUntis(
-  "dsporto",
-  "LoboRod",
-  "Portela@2008",
-  "www.borys.webuntis.com"
-)
-onDeviceReady()
-console.log("JS WORKING")
+	"dsporto",
+	"LoboRod",
+	"Portela@2008",
+	"www.borys.webuntis.com"
+);
+onDeviceReady();
+console.log("JS WORKING");
 /*await untis.login()
 const timetable = await untis.getOwnTimetableForToday()*/
+
+let a;
+function hide() {
+	if (a == 1) {
+		document.getElementById("body").style.display = "inline";
+	} else {
+		document.getElementById("body").style.display = "none";
+		return (a = 1);
+	}
+}
