@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Deutsche Schülerzentrum</title>
+		<link rel="stylesheet" href="../www/css/zentrum.css" />
+	</head>
+	<body>
+		<div class="app">
+			<div class="menu-toggle">
+				<div class="hamburger">
+					<span></span>
+				</div>
+			</div>
+
+			<aside class="sidebar">
+				<h3>Menu</h3>
+
+				<nav class="menu">
+					<a href="#" class="menu-item is-active">Zentrum</a>
+					<a href="Untis.html" class="menu-item">Untis</a>
+					<a href="#" class="menu-item">Kantine</a>
+					<a href="#" class="menu-item">DSP Website</a>
+				</nav>
+			</aside>
+
+			<main class="content">
+				<h1>Willkomen in deinen Schülerzentrum</h1>
+				<p>Hier findest du Zugang an deinen Schul-Tools</p>
+			</main>
+		</div>
+
+		<script>
+			const menu_toggle = document.querySelector(".menu-toggle");
+			const sidebar = document.querySelector(".sidebar");
+
+			menu_toggle.addEventListener("click", () => {
+				menu_toggle.classList.toggle("is-active");
+				sidebar.classList.toggle("is-active");
+			});
+		</script>
+	</body>
+</html>

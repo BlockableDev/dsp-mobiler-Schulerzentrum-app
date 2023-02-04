@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<h1>Schülerzentrum App</h1>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<link href="../www/css/index.css" rel="stylesheet" type="text/css" />
+	<body>
+		<h2>Anmeldung</h2>
+
+		<form action="/action_page.php" method="post">
+			<div class="imgcontainer">
+				<img src="../img_avatar2.png" alt="Avatar" class="avatar" />
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Untis Benutzername</b></label>
+				<input
+					type="text"
+					placeholder="Benutzername eingeben"
+					name="uname"
+					required
+				/>
+
+				<label for="psw"><b>Untis Passwort</b></label>
+				<input
+					type="password"
+					placeholder="Passwort eingeben"
+					name="psw"
+					required
+				/>
+
+				<button id="loginButton">Login</button>
+				<label>
+					<input type="checkbox" checked="checked" name="remember" /> Erinnere
+					mich
+				</label>
+			</div>
+
+			<div class="container" style="background-color: #f1f1f1">
+				<button type="button" class="cancelbtn">Abbrechen</button>
+				<span class="psw">
+					<a
+						href="https://borys.webuntis.com/WebUntis/?school=dsporto#/basic/resetPassword"
+						>Passwort vergessen?</a
+					>
+				</span>
+			</div>
+		</form>
+		<p id="demo"></p>
+		<script type="text/javascript" src=""></script>
+	</body>
+</html>

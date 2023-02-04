@@ -43,3 +43,7 @@ function hide() {
 		return (a = 1);
 	}
 }
+
+document.getElementById("loginButton").onclick = function () {
+	location.href = "www.youtube.com";
+};
