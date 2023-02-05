@@ -5,8 +5,8 @@
 	font-family: sans-serif;
 }
 
-.app {
-	display: flex;
+.SBmain {
+	display: inline;
 	min-height: 100vh;
 }
 
@@ -18,7 +18,7 @@
 	width: 60px;
 	height: 60px;
 	border-radius: 99px;
-	background-color: #2e3047;
+	background-color: #3d6e97;
 	cursor: pointer;
 }
 
@@ -66,11 +66,11 @@
 	flex: 1 1 0;
 	max-width: 300px;
 	padding: 2rem 1rem;
-	background-color: #2e3047;
+	background-color: #3d6e97;
 }
 
 .sidebar h3 {
-	color: #707793;
+	color: #f0e6aa;
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	margin-bottom: 0.5em;
@@ -90,12 +90,12 @@
 
 .sidebar .menu .menu-item:hover,
 .sidebar .menu .menu-item.is-active {
-	color: #3bba9c;
-	border-right: 5px solid #3bba9c;
+	color: #ffc107;
+	border-right: 5px solid #ffc107;
 }
 
 .sidebar .menu .menu-item:hover {
-	border-right: 5px solid #3bba9c;
+	border-right: 5px solid #ffc107;
 }
 
 .content {
@@ -104,13 +104,13 @@
 }
 
 .content h1 {
-	color: #3c3f58;
+	color: #333;
 	font-size: 2.5rem;
 	margin-bottom: 1rem;
 }
 
 .content p {
-	color: #707793;
+	color: #4c536e;
 }
 
 @media (max-width: 1024px) {
