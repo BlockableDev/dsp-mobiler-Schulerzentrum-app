@@ -32,10 +32,7 @@
 		</div>
 		<h2>Anmeldung</h2>
 
-		<form
-			action="https://borys.webuntis.com/WebUntis/?school=dsporto#/basic/login"
-			method="post"
-		>
+		<form>
 			<div class="imgcontainer">
 				<img src="../img/img_avatar2.png" alt="Avatar" class="avatar" />
 			</div>
@@ -44,6 +41,7 @@
 				<label for="uname"><b>Untis Benutzername</b></label>
 				<input
 					type="text"
+					id="uname"
 					placeholder="Benutzername eingeben"
 					name="uname"
 					required
@@ -52,12 +50,15 @@
 				<label for="psw"><b>Untis Passwort</b></label>
 				<input
 					type="password"
+					id="psw"
 					placeholder="Passwort eingeben"
 					name="psw"
 					required
 				/>
 
-				<button id="loginButton">Login</button>
+				<button type="submit" id="loginButton" onclick="loginData()">
+					Login
+				</button>
 				<label>
 					<input type="checkbox" checked="checked" name="remember" /> Erinnere
 					mich
@@ -84,6 +85,10 @@
 				menu_toggle.classList.toggle("is-active");
 				sidebar.classList.toggle("is-active");
 			});
+			function loginData() {
+				var uname = document.getElementById("uname").value;
+				var psw = document.getElementById("psw").value;
+			}
 		</script>
 	</body>
 </html>
