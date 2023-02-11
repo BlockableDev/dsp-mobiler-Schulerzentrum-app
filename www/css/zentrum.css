@@ -101,6 +101,7 @@
 .content {
 	flex: 1 1 0;
 	padding: 2rem;
+	padding-right: 2rem;
 }
 
 .content h1 {
@@ -138,5 +139,22 @@
 
 	.sidebar.is-active {
 		left: 0;
+	}
+	.imageButton {
+		position: fixed;
+		height: 20vh;
+	}
+
+	.Untis {
+		border-radius: 50%;
+	}
+	.Kantine {
+		left: 25vh;
+		border-radius: 50%;
+	}
+	.DSP {
+		top: 44vh;
+		width: 42vh;
+		border-radius: 40%;
 	}
 }
