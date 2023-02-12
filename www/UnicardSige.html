@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Deutsche Schülerzentrum</title>
+		<link rel="stylesheet" href="../../www/css/zentrum.css" />
+	</head>
+	<body>
+		<div class="SBmain">
+			<div class="menu-toggle">
+				<div class="hamburger">
+					<span></span>
+				</div>
+			</div>
+
+			<aside class="sidebar">
+				<h3>Menu</h3>
+
+				<nav class="menu">
+					<a href="index.htmlclass="menu-item">Zentrum</a>
+					<a href="Untis.html" class="menu-item">Untis</a>
+					<a href="" class="menu-item is-active">Kantine</a>
+					<a href="https://www.dsporto.de/" class="menu-item">DSP Website</a>
+				</nav>
+			</aside>
+		</div>
+		<script>
+			const menu_toggle = document.querySelector(".menu-toggle");
+			const sidebar = document.querySelector(".sidebar");
+
+			menu_toggle.addEventListener("click", () => {
+				menu_toggle.classList.toggle("is-active");
+				sidebar.classList.toggle("is-active");
+			});
+		</script>
+	</body>
+</html>
