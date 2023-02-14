@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<h1 class="Titel">Deinen Stundenplan</h1>
 		<style>
+			.Titel {
+				font-size: 39px;
+				font-weight: 600;
+				color: #333;
+				background-image: linear-gradient(rgb(109, 77, 252), rgb(91, 74, 165));
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
 			/* General styling */
 			body {
 				font-family: Arial, sans-serif;
@@ -10,30 +19,22 @@
 			/* Table styling */
 			table {
 				width: 100%;
-				border-collapse: collapse;
 				text-align: center;
 			}
 
 			th {
 				background-color: #f39e00;
-				border: 1px solid #ddd;
+				border: 3px solid #000000;
 				padding: 8px;
 			}
 
 			td {
-				border: 1px solid #ddd;
+				border: 3px solid #000000;
 				padding: 8px;
 			}
-
-			/* Colorful timetable styling */
-			.timetable tr:nth-child(odd) td {
-				background-color: #ccb94a;
+			.times {
+				background-color: #2ae6e6;
 			}
-
-			.timetable tr:nth-child(even) td {
-				background-color: #ebdf3e;
-			}
-
 			/* Unterricht 1 */
 			.timetable td.Unterricht-1 {
 				background-color: #ffb6c1;
@@ -85,7 +86,7 @@
 			}
 		</style>
 	</head>
-	<link href="../../www/css/index.css" rel="stylesheet" type="text/css" />
+	<link href="../css/timetablesUntis.css" rel="stylesheet" type="text/css" />
 	<body>
 		<div class="SBmain">
 			<div class="menu-toggle">
@@ -93,8 +94,11 @@
 					<span></span>
 				</div>
 			</div>
-
+			<div id="lesson-details"></div>
 			<table class="timetable">
+				<tr>
+					<th colspan="6" class="tableHead">Diese Woche</th>
+				</tr>
 				<tr>
 					<th>Zeit</th>
 					<th>Montag</th>
@@ -104,90 +108,330 @@
 					<th>Freitag</th>
 				</tr>
 				<tr>
-					<td>8:15 - 9:00</td>
-					<td class="Unterricht-1">Unterricht 1</td>
-					<td class="Unterricht-2">Unterricht 1</td>
-					<td class="Unterricht-3">Unterricht 1</td>
-					<td class="Unterricht-4">Unterricht 1</td>
-					<td class="Unterricht-4">Unterricht 1</td>
+					<td class="times">8:15 - 9:00</td>
+					<td class="Unterricht-1">
+						Unterricht 1 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 1 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 1 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 1 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 1 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>9:05 - 9:50</td>
-					<td class="Unterricht-1">Unterricht 2</td>
-					<td class="Unterricht-2">Unterricht 2</td>
-					<td class="Unterricht-3">Unterricht 2</td>
-					<td class="Unterricht-4">Unterricht 2</td>
-					<td class="Unterricht-4">Unterricht 2</td>
+					<td class="times">9:05 - 9:50</td>
+					<td class="Unterricht-1">
+						Unterricht 2 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 2 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 2 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 2 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 2 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>10:05 - 10:50</td>
-					<td class="Unterricht-1">Unterricht 3</td>
-					<td class="Unterricht-2">Unterricht 3</td>
-					<td class="Unterricht-3">Unterricht 3</td>
-					<td class="Unterricht-4">Unterricht 3</td>
-					<td class="Unterricht-4">Unterricht 3</td>
+					<td class="times">10:05 - 10:50</td>
+					<td class="Unterricht-1">
+						Unterricht 3 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 3 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 3 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 3 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 3 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>10:55 - 11:40</td>
-					<td class="Unterricht-1">Unterricht 4</td>
-					<td class="Unterricht-2">Unterricht 4</td>
-					<td class="Unterricht-3">Unterricht 4</td>
-					<td class="Unterricht-4">Unterricht 4</td>
-					<td class="Unterricht-4">Unterricht 4</td>
+					<td class="times">10:55 - 11:40</td>
+					<td class="Unterricht-1">
+						Unterricht 4 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 4 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 4 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 4 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 4 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>11:55 - 12:40</td>
-					<td class="Unterricht-1">Unterricht 5</td>
-					<td class="Unterricht-2">Unterricht 5</td>
-					<td class="Unterricht-3">Unterricht 5</td>
-					<td class="Unterricht-4">Unterricht 5</td>
-					<td class="Unterricht-4">Unterricht 5</td>
+					<td class="times">11:55 - 12:40</td>
+					<td class="Unterricht-1">
+						Unterricht 5 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 5 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 5 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 5 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 5 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>12:45 - 13:30</td>
-					<td class="Unterricht-1">Unterricht 6</td>
-					<td class="Unterricht-2">Unterricht 6</td>
-					<td class="Unterricht-3">Unterricht 6</td>
-					<td class="Unterricht-4">Unterricht 6</td>
-					<td class="Unterricht-4">Unterricht 6</td>
+					<td class="times">12:45 - 13:30</td>
+					<td class="Unterricht-1">
+						Unterricht 6 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 6 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 6 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 6 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 6 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>14:30 - 15:15</td>
-					<td class="Unterricht-1">Unterricht 7</td>
-					<td class="Unterricht-2">Unterricht 7</td>
-					<td class="Unterricht-3">Unterricht 7</td>
-					<td class="Unterricht-4">Unterricht 7</td>
-					<td class="Unterricht-4">Unterricht 7</td>
+					<td class="times">14:30 - 15:15</td>
+					<td class="Unterricht-1">
+						Unterricht 7 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 7 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 7 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 7 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 7 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>15:20 - 16:05</td>
-					<td class="Unterricht-1">Unterricht 8</td>
-					<td class="Unterricht-2">Unterricht 8</td>
-					<td class="Unterricht-3">Unterricht 8</td>
-					<td class="Unterricht-4">Unterricht 8</td>
-					<td class="Unterricht-4">Unterricht 8</td>
+					<td class="times">15:20 - 16:05</td>
+					<td class="Unterricht-1">
+						Unterricht 8 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 8 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 8 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 8 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 8 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>16:15 - 17:00</td>
-					<td class="Unterricht-1">Unterricht 9</td>
-					<td class="Unterricht-2">Unterricht 9</td>
-					<td class="Unterricht-3">Unterricht 9</td>
-					<td class="Unterricht-4">Unterricht 9</td>
-					<td class="Unterricht-4">Unterricht 9</td>
+					<td class="times">16:15 - 17:00</td>
+					<td class="Unterricht-1">
+						Unterricht 9 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 9 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 9 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 9 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 9 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 				<tr>
-					<td>17:10 - 17:55</td>
-					<td class="Unterricht-1">Unterricht 10</td>
-					<td class="Unterricht-2">Unterricht 10</td>
-					<td class="Unterricht-3">Unterricht 10</td>
-					<td class="Unterricht-4">Unterricht 10</td>
-					<td class="Unterricht-4">Unterricht 10</td>
+					<td class="times">17:10 - 17:55</td>
+					<td class="Unterricht-1">
+						Unterricht 10 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-2">
+						Unterricht 10 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-3">
+						Unterricht 10 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-4">
+						Unterricht 10 <br />
+						Lehrer <br />
+						Ort
+					</td>
+					<td class="Unterricht-5">
+						Unterricht 10 <br />
+						Lehrer <br />
+						Ort
+					</td>
 				</tr>
 			</table>
 			<link
 				href="https://fonts.googleapis.com/icon?family=Material+Icons"
 				rel="stylesheet"
 			/>
+			<style>
+				.tableHead {
+					font-size: 39px;
+					font-weight: 600;
+				}
+				.Woche {
+					font-weight: 600;
+					color: transparent;
+					background-image: linear-gradient(
+						rgb(109, 77, 252),
+						rgb(91, 74, 165)
+					);
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
+				.timetable {
+					padding-top: 3vh;
+					height: 1000px;
+				}
+				.Unterricht-1 {
+					border: 2px solid rgba(236, 0, 0, 0.123);
+					border-radius: 10%;
+				}
+				.Unterricht-2 {
+					border: none;
+					border-radius: 10%;
+				}
+				.Unterricht-3 {
+					border: none;
+					border-radius: 10%;
+				}
+				.Unterricht-4 {
+					border: none;
+					border-radius: 10%;
+				}
+				.Unterricht-5 {
+					border: none;
+					border-radius: 10%;
+				}
+			</style>
 			<nav class="nav">
 				<a href="#" class="nav__link nav__link--active">
 					<i class="material-icons nav__icon">dashboard</i>
@@ -210,7 +454,7 @@
 				<h3>Menu</h3>
 
 				<nav class="menu">
-					<a href="" class="menu-item is-active">Zentrum</a>
+					<a href="Zentrum.html" class="menu-item">Zentrum</a>
 					<a href="Untis.html" class="menu-item">Untis</a>
 					<a
 						href="https://dsporto.unicard.pt/UnicardSIGE_Portal"
@@ -230,5 +474,8 @@
 			menu_toggle.classList.toggle("is-active");
 			sidebar.classList.toggle("is-active");
 		});
+		function openlessonlink() {
+			location.href = "google.com";
+		}
 	</script>
 </html>
