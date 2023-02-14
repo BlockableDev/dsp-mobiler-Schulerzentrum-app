@@ -1,0 +1,500 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+	-webkit-tap-highlight-color: rgba(
+		0,
+		0,
+		0,
+		0
+	); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+	-webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+	background-color: #e4e4e4;
+	background-image: linear-gradient(to bottom, #6e1313 0%, #e4e4e4 51%);
+	font-family: system-ui, -apple-system, -apple-system-font, "Segoe UI",
+		"Roboto", sans-serif;
+	font-size: 12px;
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+	/* Padding to avoid the "unsafe" areas behind notches in the screen */
+	padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+		env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+	text-transform: uppercase;
+	width: 100%;
+}
+
+/* Portrait layout (default) */
+.app {
+	background: url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+	position: absolute; /* position in the center of the screen */
+	left: 50%;
+	top: 50%;
+	height: 50px; /* text area height */
+	width: 225px; /* text area width */
+	text-align: center;
+	padding: 180px 0px 0px 0px; /* image height is 200px (bottom 20px are overlapped with text) */
+	margin: -115px 0px 0px -112px; /* offset vertical: half of image height and text area height */
+	/* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+	.app {
+		background-position: left center;
+		padding: 75px 0px 75px 170px; /* padding-top + padding-bottom + text area = image height */
+		margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
+		/* offset horizontal: half of image width and text area width */
+	}
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0px;
+	overflow: visible;
+	padding: 0px;
+	text-align: center;
+}
+
+.event {
+	border-radius: 4px;
+	color: #ffffff;
+	font-size: 12px;
+	margin: 0px 30px;
+	padding: 2px 0px;
+}
+
+.event.listening {
+	background-color: #333333;
+	display: block;
+}
+
+.event.received {
+	background-color: #4b946a;
+	display: none;
+}
+
+#deviceready.ready .event.listening {
+	display: none;
+}
+#deviceready.ready .event.received {
+	display: block;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.blink {
+	animation: fade 3000ms infinite;
+	-webkit-animation: fade 3000ms infinite;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	body {
+		background-image: linear-gradient(to bottom, #f39325 0%, #d35757 51%);
+	}
+}
+
+/* Bordered form */
+form {
+	border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #04aa6d;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+	opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+	padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+/* Untis timetable for Word document */
+.timetable-container {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	border: 1px solid rgb(255, 0, 0);
+	padding: 8px;
+}
+
+th {
+	background-color: rgb(230, 15, 15);
+}
+
+.lesson {
+	background-color: #e20000;
+}
+
+/*style tab in html*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+form {
+	border: 3px solid #f1f1f1;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #04aa6d;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+img.avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+.container {
+	padding: 16px;
+}
+
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.SBmain {
+	display: inline;
+	min-height: 100vh;
+}
+
+.menu-toggle {
+	display: none;
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	width: 60px;
+	height: 60px;
+	border-radius: 99px;
+	background-color: #3d6e97;
+	cursor: pointer;
+}
+
+.hamburger {
+	position: relative;
+	top: calc(50% - 2px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 32px;
+}
+
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	border-radius: 99px;
+	background-color: #fff;
+	transition-duration: 0.25s;
+}
+
+.hamburger > span::before {
+	content: "";
+	top: -8px;
+}
+.hamburger > span::after {
+	content: "";
+	top: 8px;
+}
+.menu-toggle.is-active .hamburger > span {
+	transform: rotate(45deg);
+}
+.menu-toggle.is-active .hamburger > span::before {
+	top: 0;
+	transform: rotate(0deg);
+}
+.menu-toggle.is-active .hamburger > span::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+
+.sidebar {
+	flex: 1 1 0;
+	max-width: 300px;
+	padding: 2rem 1rem;
+	background-color: #3d6e97;
+}
+
+.sidebar h3 {
+	color: #f0e6aa;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+}
+
+.sidebar .menu {
+	margin: 0 -1rem;
+}
+
+.sidebar .menu .menu-item {
+	display: block;
+	padding: 1em;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.2s linear;
+}
+
+.sidebar .menu .menu-item:hover,
+.sidebar .menu .menu-item.is-active {
+	color: #ffc107;
+	border-right: 5px solid #ffc107;
+}
+
+.sidebar .menu .menu-item:hover {
+	border-right: 5px solid #ffc107;
+}
+
+.content {
+	flex: 1 1 0;
+	padding: 2rem;
+}
+
+.content h1 {
+	color: #333;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.content p {
+	color: #4c536e;
+}
+
+@media (max-width: 1024px) {
+	.sidebar {
+		max-width: 200px;
+	}
+}
+
+@media (max-width: 768px) {
+	.menu-toggle {
+		display: block;
+	}
+	.content {
+		padding-top: 8rem;
+	}
+	.sidebar {
+		position: fixed;
+		top: 0;
+		left: -300px;
+		height: 100vh;
+		width: 100%;
+		max-width: 300px;
+		transition: 0.2s linear;
+	}
+
+	.sidebar.is-active {
+		left: 0;
+	}
+}
+
+.timetable {
+	margin-top: 10vh;
+}
+body {
+	margin: 0 0 55px 0;
+}
+
+.nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	background-color: #ffffff;
+	display: flex;
+	overflow-x: auto;
+}
+
+.nav__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	min-width: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	font-family: sans-serif;
+	font-size: 13px;
+	color: #444444;
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+	transition: background-color 0.1s ease-in-out;
+}
+
+.nav__link:hover {
+	background-color: #eeeeee;
+}
+
+.nav__link--active {
+	color: #009578;
+}
+
+.nav__icon {
+	font-size: 18px;
+}
+.imageButton {
+	position: fixed;
+	height: 20vh;
+}
+
+.Untis {
+	border-radius: 50%;
+}
+.Kantine {
+	left: 25vh;
+	border-radius: 50%;
+}
+.DSP {
+	top: 44vh;
+	width: 42vh;
+	border-radius: 40%;
+}
