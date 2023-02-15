@@ -504,3 +504,16 @@ body {
 	bottom: 0;
 	left: 0;
 }
+
+.abmeldenButton {
+	background-color: #e20000;
+	width: auto;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+}
+.abmeldenButton:hover {
+	opacity: 0,8;
+}
