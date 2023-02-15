@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+
+    <h1>Schülerzentrum App</h1>
+    <p id="teste">ola</p>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<link href="untis.css" rel="stylesheet" type="text/css" />
+<script src=login.js type="text/javascript"></script>
+
+<body>
+    <div class="SBmain">
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+            </div>
+        </div>
+
+        <aside class="sidebar">
+            <h3>Menu</h3>
+
+            <nav class="menu">
+                <a href="index.html" class="menu-item">Zentrum</a>
+                <a href="" class="menu-item is-active">Untis</a>
+                <a href="https://dsporto.unicard.pt/UnicardSIGE_Portal" class="menu-item">Kantine</a>
+                <a href="https://www.dsporto.de/" class="menu-item">DSP Website</a>
+            </nav>
+        </aside>
+    </div>
+    <h2>Anmeldung</h2>
+
+    <form id="form" onsubmit="return false">
+        <div class="imgcontainer">
+            <img src="../img/img_avatar2.png" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Untis Benutzername</b></label>
+            <input type="text" id="uname" placeholder="Benutzername eingeben" name="uname" required />
+
+            <label for="psw"><b>Untis Passwort</b></label>
+            <input type="password" id="psw" placeholder="Passwort eingeben" name="psw" required />
+
+            <button type="submit" id="loginButton" onclick="logger()">
+                Login
+            </button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" /> Erinnere
+                mich
+            </label>
+        </div>
+        <p id="yes"></p>
+
+        <div class="container" style="background-color: #f1f1f1">
+            <button type="button" class="cancelbtn">Abbrechen</button>
+            <span class="psw">
+                <a href="https://borys.webuntis.com/WebUntis/?school=dsporto#/basic/resetPassword"
+                    target="_blank">Passwort vergessen?</a>
+            </span>
+        </div>
+    </form>
+    <p id="demo"></p>
+    <script>
+        menu_toggle = document.querySelector(".menu-toggle")
+        sidebar = document.querySelector(".sidebar")
+
+        menu_toggle.addEventListener("click", () =>
+        {
+            menu_toggle.classList.toggle("is-active");
+            sidebar.classList.toggle("is-active");
+        });
+    </script>
+</body>
+
+</html>
