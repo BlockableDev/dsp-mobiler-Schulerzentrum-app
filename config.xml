@@ -1,11 +1,12 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>DSZ</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+  <name>DSZ</name>
+  <description>Sample Apache Cordova App</description>
+  <author email="dev@cordova.apache.org" href="https://cordova.apache.org">&#xD;
+        Apache Cordova Team&#xD;
     </author>
-    <content src="index.html" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+  <content src="index.html"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <hook src="node_modules/cordova-import-npm/scripts/importNpmPackages.js" type="before_prepare"/>
 </widget>

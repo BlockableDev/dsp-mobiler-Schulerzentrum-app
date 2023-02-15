@@ -48,9 +48,6 @@ document.getElementById("loginButton").onclick = function () {
 	location.href = "www.youtube.com";
 };
 
-const menu_toggle = document.querySelector(".menu-toggle");
-const sidebar = document.querySelector(".sidebar");
-
 menu_toggle.addEventListener("click", () => {
 	menu_toggle.classList.toggle("is-active");
 	sidebar.classList.toggle("is-active");
@@ -58,4 +55,7 @@ menu_toggle.addEventListener("click", () => {
 
 var uname = document.getElementById("uname");
 var psw = document.getElementById("psw");
-alert(uname);
+
+function openlessonlink() {
+	location.href = "google.com";
+}

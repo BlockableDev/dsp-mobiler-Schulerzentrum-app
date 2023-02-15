@@ -4,6 +4,38 @@
 		<style></style>
 	</head>
 	<link href="index.css" rel="stylesheet" type="text/css" />
+	<style>
+		.timetable {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.timetable button {
+			width: 200px;
+			height: 200px;
+			margin: 10px;
+			font-size: 30px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+		.timetable button:hover {
+			transform: scale(1.1);
+		}
+		.math {
+			background-color: lightblue;
+			padding-left: 10px;
+		}
+		.history {
+			background-color: lightcoral;
+		}
+		.english {
+			background-color: lightgreen;
+		}
+		.science {
+			background-color: lightsalmon;
+		}
+	</style>
 	<body>
 		<div class="SBmain">
 			<div class="menu-toggle">
@@ -15,8 +47,21 @@
 				href="https://fonts.googleapis.com/icon?family=Material+Icons"
 				rel="stylesheet"
 			/>
+			<main class="content">
+				<h1>Deine Hausaufgaben</h1>
+				<p>Klicke einfach auf der Arbeitsauftrag</p>
+				<br />
+				<div class="timetable">
+					<button class="math">Portugiesisch</button>
+					<button class="history">Deutsch</button>
+					<button class="english">Englisch</button>
+					<button class="science">Mathe</button>
+				</div>
+				<div id="lesson-details"></div>
+			</main>
+
 			<nav class="nav">
-				<a href="../html/timetablesUntis.html" class="nav__link">
+				<a href="timetablesUntis.html" class="nav__link">
 					<i class="material-icons nav__icon">dashboard</i>
 					<span class="nav__text">Stundenplan</span>
 				</a>
@@ -24,11 +69,11 @@
 					<i class="material-icons nav__icon">home</i>
 					<span class="nav__text">Hausaufgaben</span>
 				</a>
-				<a href="../html/profileUntis.html" class="nav__link">
+				<a href="profileUntis.html" class="nav__link">
 					<i class="material-icons nav__icon">person</i>
 					<span class="nav__text">Profil</span>
 				</a>
-				<a href="../html/settingsUntis.html" class="nav__link">
+				<a href="settingsUntis.html" class="nav__link">
 					<i class="material-icons nav__icon">settings</i>
 					<span class="nav__text">Einstellungen</span>
 				</a>
@@ -37,7 +82,7 @@
 				<h3>Menu</h3>
 
 				<nav class="menu">
-					<a href="" class="menu-item is-active">Zentrum</a>
+					<a href="index.html" class="menu-item">Zentrum</a>
 					<a href="Untis.html" class="menu-item">Untis</a>
 					<a
 						href="https://dsporto.unicard.pt/UnicardSIGE_Portal"
@@ -56,6 +101,13 @@
 		menu_toggle.addEventListener("click", () => {
 			menu_toggle.classList.toggle("is-active");
 			sidebar.classList.toggle("is-active");
+		});
+		const buttons = document.querySelectorAll(".timetable button");
+		buttons.forEach((button) => {
+			button.addEventListener("click", (e) => {
+				const subject = e.target.innerText;
+				document.querySelector("#lesson-details");
+			});
 		});
 	</script>
 </html>

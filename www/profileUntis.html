@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<style></style>
+		<h1>Deinen Schulprofil</h1>
+		<p>Eingemeldet als <var id="username">username</var></p>
+		<p>Aus der Klasse <var id="kl">kl</var></p>
 	</head>
 	<link href="index.css" rel="stylesheet" type="text/css" />
 	<body>
@@ -16,11 +18,11 @@
 				rel="stylesheet"
 			/>
 			<nav class="nav">
-				<a href="../html/timetablesUntis.html" class="nav__link">
+				<a href="timetablesUntis.html" class="nav__link">
 					<i class="material-icons nav__icon">dashboard</i>
 					<span class="nav__text">Stundenplan</span>
 				</a>
-				<a href="../html/homeworkUntis.html" class="nav__link">
+				<a href="homeworkUntis.html" class="nav__link">
 					<i class="material-icons nav__icon">home</i>
 					<span class="nav__text">Hausaufgaben</span>
 				</a>
@@ -28,7 +30,7 @@
 					<i class="material-icons nav__icon">person</i>
 					<span class="nav__text">Profil</span>
 				</a>
-				<a href="../html/settingsUntis.html" class="nav__link">
+				<a href="settingsUntis.html" class="nav__link">
 					<i class="material-icons nav__icon">settings</i>
 					<span class="nav__text">Einstellungen</span>
 				</a>
@@ -37,7 +39,7 @@
 				<h3>Menu</h3>
 
 				<nav class="menu">
-					<a href="" class="menu-item is-active">Zentrum</a>
+					<a href="index.html" class="menu-item">Zentrum</a>
 					<a href="Untis.html" class="menu-item">Untis</a>
 					<a
 						href="https://dsporto.unicard.pt/UnicardSIGE_Portal"
@@ -57,5 +59,9 @@
 			menu_toggle.classList.toggle("is-active");
 			sidebar.classList.toggle("is-active");
 		});
+		var rodasusername = "LoboRod"
+		var rodasklasse = "9a"
+		document.getElementById(username).innerHTML = rodasusername
+		document.getElementById(kl).innerHTML = rodasklasse
 	</script>
 </html>

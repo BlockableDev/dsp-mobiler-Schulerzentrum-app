@@ -19,5 +19,9 @@
     "platforms": [
       "android"
     ]
+  },
+  "dependencies": {
+    "cordova-import-npm": "^1.0.35",
+    "webuntis": "^2.0.3"
   }
 }

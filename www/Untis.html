@@ -2,11 +2,13 @@
 <html lang="de">
 	<head>
 		<h1>Schülerzentrum App</h1>
+		<p id="teste">ola</p>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<link href="untis.css" rel="stylesheet" type="text/css" />
+	<script src=login.js type="text/javascript"></script>
 	<body>
 		<div class="SBmain">
 			<div class="menu-toggle">
@@ -32,7 +34,7 @@
 		</div>
 		<h2>Anmeldung</h2>
 
-		<form>
+		<form id="form" onsubmit="return false">
 			<div class="imgcontainer">
 				<img src="../img/img_avatar2.png" alt="Avatar" class="avatar" />
 			</div>
@@ -56,7 +58,7 @@
 					required
 				/>
 
-				<button type="submit" id="loginButton" onclick="loginData()">
+				<button type="submit" id="loginButton" onclick="logger()">
 					Login
 				</button>
 				<label>
@@ -64,6 +66,7 @@
 					mich
 				</label>
 			</div>
+			<p id="yes"></p>
 
 			<div class="container" style="background-color: #f1f1f1">
 				<button type="button" class="cancelbtn">Abbrechen</button>
@@ -77,18 +80,6 @@
 			</div>
 		</form>
 		<p id="demo"></p>
-		<script type="text/javascript">
-			const menu_toggle = document.querySelector(".menu-toggle");
-			const sidebar = document.querySelector(".sidebar");
-
-			menu_toggle.addEventListener("click", () => {
-				menu_toggle.classList.toggle("is-active");
-				sidebar.classList.toggle("is-active");
-			});
-			function loginData() {
-				var uname = document.getElementById("uname").value;
-				var psw = document.getElementById("psw").value;
-			}
 		</script>
 	</body>
 </html>
