@@ -1,0 +1,6 @@
+{
+    "webuntis": {
+        "from": "dist/webuntis.js",
+        "to": "tablePuller.js"
+      }
+}

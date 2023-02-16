@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<h1 class="Titel">Deinen Stundenplan</h1>
+		<style>
+			.Titel {
+				font-size: 39px;
+				font-weight: 600;
+				color: #333;
+				background-image: linear-gradient(rgb(109, 77, 252), rgb(91, 74, 165));
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			/* General styling */
+			body {
+				font-family: Arial, sans-serif;
+			}
+
+			th {
+				background-color: #f39e00;
+				border: 3px solid #000000;
+				padding: 8px;
+			}
+
+			td {
+				border: 3px solid #000000;
+				padding: 8px;
+			}
+			.times {
+				background-color: #2ae6e6;
+			}
+			/* Unterricht 1 */
+			.timetable td.Unterricht-1 {
+				background-color: #ffb6c1;
+			}
+
+			/* Unterricht 2 */
+			.timetable td.Unterricht-2 {
+				background-color: #87cefa;
+			}
+
+			/* Unterricht 3 */
+			.timetable td.Unterricht-3 {
+				background-color: #90ee90;
+			}
+
+			/* Unterricht 4 */
+			.timetable td.Unterricht-4 {
+				background-color: #f0e68c;
+			}
+
+			/* Unterricht 5 */
+			.timetable td.Unterricht-5 {
+				background-color: #ffa07a;
+			}
+
+			/* Unterricht 6 */
+			.timetable td.Unterricht-6 {
+				background-color: #7fffd4;
+			}
+
+			/* Unterricht 7 */
+			.timetable td.Unterricht-7 {
+				background-color: #add8e6;
+			}
+
+			/* Unterricht 8 */
+			.timetable td.Unterricht-8 {
+				background-color: #ffc0cb;
+			}
+
+			/* Unterricht 9 */
+			.timetable td.Unterricht-9 {
+				background-color: #98fb98;
+			}
+
+			/* Unterricht 10 */
+			.timetable td.Unterricht-10 {
+				background-color: #f0e68c;
+			}
+		</style>
+	</head>
+	<link href="css/timetablesUntis.css" rel="stylesheet" type="text/css" />
+	<script src="tablePuller.js"></script>
+	<body>
+		<div class="SBmain">
+			<div class="menu-toggle">
+				<div class="hamburger">
+					<span></span>
+				</div>
+			</div>
+			<div id="lesson-details"></div>
+			<table class="timetable">
+				<tr>
+					<th colspan="6" class="tableHead">Diese Woche</th>
+				</tr>
+				<tr>
+					<th>Zeit</th>
+					<th>Montag</th>
+					<th>Dienstag</th>
+					<th>Mittwoch</th>
+					<th>Donnerstag</th>
+					<th>Freitag</th>
+				</tr>
+				<tr>
+					<td class="times">8:15 - 9:00</td>
+					<td class="Unterricht-1">
+						<p id="subjectname">M</p>
+						<p id="teachername">Seb</p>
+						<p id="roomname">203</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname3">D</p>
+						<p id="tercateachername3">Gm</p>
+						<p id="tercaroomname3">202</p>
+					</td>
+					<script>document.getElementById("tercaroomname3").innerHTML = "talvez"</script>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname">E</p>
+						<p id="quartateachername">Kr</p>
+						<p id="quartaroomname">201</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname">Sp</p>
+						<p id="quintateachername">Sv</p>
+						<p id="quintaroomname">NSpH 1</p>
+					</td>
+					<td class="Unterricht-5">
+						<p id="sextasubjectname">GP</p>
+						<p id="sextateachername">Gd</p>
+						<p id="sextaroomname">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">9:05 - 9:50</td>
+					<td class="Unterricht-1">
+						<p id="subjectname2">M</p>
+						<p id="teachername2">Seb</p>
+						<p id="roomname2">203</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname3">D</p>
+						<p id="tercateachername3">Gm</p>
+						<p id="tercaroomname3">202</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname2">E</p>
+						<p id="quartateachername2">Kr</p>
+						<p id="quartaroomname2">201</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname2">Sp</p>
+						<p id="quintateachername2">Sv</p>
+						<p id="quintaroomname2">NSpH1</p>
+					</td>
+					<td class="Unterricht-5">
+						<p id="sextasubjectname2">GP</p>
+						<p id="sextateachername2">Gd</p>
+						<p id="sextaroomname2">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">10:05 - 10:50</td>
+					<td class="Unterricht-1">
+						<p id="subjectname3">E</p>
+						<p id="teachername3">Kr</p>
+						<p id="roomname3">201</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname5">HP</p>
+						<p id="tercateachername5">Nu</p>
+						<p id="tercaroomname5">201</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname3">F</p>
+						<p id="quartateachername3">Gt</p>
+						<p id="quartaroomname3">201</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname3">D</p>
+						<p id="quintateachername3">Gm</p>
+						<p id="quintaroomname3">201</p>
+					</td>
+					<td class="Unterricht-5">
+						<p id="sextasubjectname3">Ch</p>
+						<p id="sextateachername3">Mu</p>
+						<p id="sextaroomname3">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">10:55 - 11:40</td>
+					<td class="Unterricht-1">
+						<p id="subjectname4">E</p>
+						<p id="teachername4">Kr</p>
+						<p id="roomname4">201</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname7">HP</p>
+						<p id="tercateachername7">Nu</p>
+						<p id="tercaroomname7">201</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname5">D</p>
+						<p id="quartateachername5">Gm</p>
+						<p id="quartaroomname5">201</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname4">D</p>
+						<p id="quintateachername4">Gm</p>
+						<p id="quintaroomname4">201</p>
+					</td>
+					<td class="Unterricht-5">
+						<p id="sextasubjectname4">Ch</p>
+						<p id="sextateachername4">Mu</p>
+						<p id="sextaroomname4">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">11:55 - 12:40</td>
+					<td class="Unterricht-1">
+						<p id="subjectname5">F</p>
+						<p id="teachername5">Gt</p>
+						<p id="roomname5">201</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname8">Ph</p>
+						<p id="tercateachername8">Bat</p>
+						<p id="tercaroomname8">201</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname6">Et</p>
+						<p id="quartateachername6">Bb</p>
+						<p id="quartaroomname6">FR Com</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname5">M</p>
+						<p id="quintateachername5">Seb</p>
+						<p id="quintaroomname5">201</p>
+					</td>
+					<td class="Unterricht-5">
+						<p id="sextasubjectname5">P</p>
+						<p id="sextateachername5">Ba</p>
+						<p id="sextaroomname5">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">12:45 - 13:30</td>
+					<td class="Unterricht-1">
+						<p id="subjectname7">F</p>
+						<p id="teachername7">Gt</p>
+						<p id="roomname7">201</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname9">Ph</p>
+						<p id="tercateachername9">Bat</p>
+						<p id="tercaroomname9">FR Ph</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname7">Et</p>
+						<p id="quartateachername7">Bb</p>
+						<p id="quartaroomname7">Fr Com</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname6">M</p>
+						<p id="quintateachername6">Seb</p>
+						<p id="quintaroomname6">201</p>
+					</td>
+					<td class="Unterricht-5">
+						<p id="sextasubjectname6">P</p>
+						<p id="sextateachername6">Ba</p>
+						<p id="sextaroomname6">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">14:30 - 15:15</td>
+					<td class="Unterricht-1">
+						<p id="subjectname9">Bio</p>
+						<p id="teachername9">Bat</p>
+						<p id="roomname9">FR Bio</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname10">Veranstaltung</p>
+						<p id="tercateachername10">Fe</p>
+						<p id="tercaroomname10">FR Kar</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname8">P</p>
+						<p id="quartateachername8">Ba</p>
+						<p id="quartaroomname8">201</p>
+					</td>
+					<td class="Unterricht-4">
+						<p id="quintasubjectname7">F</p>
+						<p id="quintateachername7">Gt</p>
+						<p id="quintaroomname7">201</p>
+					</td>
+				</tr>
+				<tr>
+					<td class="times">15:20 - 16:05</td>
+					<td class="Unterricht-1">
+						<p id="subjectname10">Bio</p>
+						<p id="teachername10">Ba</p>
+						<p id="roomname10">FR Bio</p>
+					</td>
+					<td class="Unterricht-2">
+						<p id="tercasubjectname11">Mu</p>
+						<p id="tercateachername11">Kr</p>
+						<p id="tercaroomname11">FR Mu</p>
+					</td>
+					<td class="Unterricht-3">
+						<p id="quartasubjectname9">P</p>
+						<p id="quartateachername9">Ba</p>
+						<p id="quartaroomname9">201</p>
+					</td>
+				</tr>
+	
+				<!-- <tr>
+						<td class="times">16:15 - 17:00</td>
+						<td class="Unterricht-1">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-2">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-3">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-4">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-5">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="times">17:10 - 17:55</td>
+						<td class="Unterricht-1">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-2">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-3">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-4">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+						<td class="Unterricht-5">
+							<p id="">1</p>
+							<p id="">1</p>
+							<p id="">1</p>
+						</td>
+					</tr> -->
+			</table>
+			<script src="bundle.js"></script>
+			<link
+				href="https://fonts.googleapis.com/icon?family=Material+Icons"
+				rel="stylesheet"
+			/>
+			<style>
+				.tableHead {
+					font-size: 39px;
+					font-weight: 600;
+				}
+				.Woche {
+					font-weight: 600;
+					color: transparent;
+					background-image: linear-gradient(
+						rgb(109, 77, 252),
+						rgb(91, 74, 165)
+					);
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
+				.timetable {
+					padding-top: 3vh;
+					height: 1000px;
+				}
+				.Unterricht-1 {
+					border: 2px solid rgba(236, 0, 0, 0.123);
+					border-radius: 10%;
+				}
+				.Unterricht-2 {
+					border: none;
+					border-radius: 10%;
+				}
+				.Unterricht-3 {
+					border: none;
+					border-radius: 10%;
+				}
+				.Unterricht-4 {
+					border: none;
+					border-radius: 10%;
+				}
+				.Unterricht-5 {
+					border: none;
+					border-radius: 10%;
+				}
+			</style>
+			<nav class="nav">
+				<a href="#" class="nav__link nav__link--active">
+					<i class="material-icons nav__icon">dashboard</i>
+					<span class="nav__text">Stundenplan</span>
+				</a>
+				<a href="homeworkUntis.html" class="nav__link">
+					<i class="material-icons nav__icon">home</i>
+					<span class="nav__text">Hausaufgaben</span>
+				</a>
+				<a href="profileUntis.html" class="nav__link">
+					<i class="material-icons nav__icon">person</i>
+					<span class="nav__text">Profil</span>
+				</a>
+				<a href="settingsUntis.html" class="nav__link">
+					<i class="material-icons nav__icon">settings</i>
+					<span class="nav__text">Einstellungen</span>
+				</a>
+			</nav>
+			<aside class="sidebar">
+				<h3>Menu</h3>
+
+				<nav class="menu">
+					<a href="index.html" class="menu-item">Zentrum</a>
+					<a href="Untis.html" class="menu-item">Untis</a>
+					<a
+						href="https://dsporto.unicard.pt/UnicardSIGE_Portal"
+						class="menu-item"
+						>Kantine</a
+					>
+					<a href="https://www.dsporto.de/" class="menu-item">DSP Website</a>
+				</nav>
+			</aside>
+		</div>
+	</body>
+	<script src="timetables.js">
+
+	</script>
+</html>

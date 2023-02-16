@@ -5,7 +5,18 @@
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>
+<<<<<<< Updated upstream
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 </widget>
+=======
+  <content src="index.html"/>
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <hook src="node_modules/cordova-import-npm/scripts/importNpmPackages.js" type="before_prepare"/>
+  <icon src="www\img\logo.png" platform="android" width="64" height="64" density="mdpi" />
+  <preference name="webviewbounce" value="false" />
+  <preference name="DisallowOverscroll" value="true" />
+</widget>
+>>>>>>> Stashed changes
