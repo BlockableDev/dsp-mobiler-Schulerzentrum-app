@@ -1,3 +1,4 @@
 #ignores specific file directories
 /node_modules
 /platforms
+/local_outdated
