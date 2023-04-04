@@ -14,13 +14,10 @@ Welcome to the DSP School App, an all-in-one mobile application designed for stu
 If you have any issues or questions about the app, please contact the IT department at the school.
 
 ## Contribution
-If you want to contribute to this project, please contact the IT department at the school.
-
-## Note
-This is a fictional app for demonstration purpose only.
+If you want to contribute to this project, please contact our school emails.
 
 ## License
-This project is under MIT license.
+This project is under no license as of now, but may in the future get one from our school.
 
 ## Acknowledgments
 - Jugendforscht
