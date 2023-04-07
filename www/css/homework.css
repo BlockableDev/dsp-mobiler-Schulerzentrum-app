@@ -1,0 +1,31 @@
+#mathsText,
+#englishText,
+#frenchText,
+#biologyText,
+#germanText,
+#historyText,
+#history-ptText,
+#musicText,
+#ethicsText,
+#portugueseText,
+#sportText,
+#geographyText,
+#chemestryText{
+font-size: 25px;
+display: none;
+}
+#mathsText.active,
+#englishText.active,
+#frenchText.active,
+#biologyText.active,
+#germanText.active,
+#historyText.active,
+#history-ptText.active,
+#musicText.active,
+#ethicsText.active,
+#portugueseText.active,
+#sportText.active,
+#geographyText.active,
+#chemestryText.active{
+display: block;
+}

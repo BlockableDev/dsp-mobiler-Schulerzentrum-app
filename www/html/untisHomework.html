@@ -7,8 +7,65 @@
 		<title>DSZ</title>
 		<link rel="stylesheet" href="../css/bottomNavBar.css" />
         <link rel="stylesheet" href="../css/mainSidebar.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/homework.css">
 	</head>
 	<body>
+        <div class="main">
+            <h1 class="main-heading">Hausaufgaben</h1>
+            <button class="maths" id="maths" onclick="changedata(0)">Mathe</button>
+            <div id="mathsText">
+                <p id="mathsHW">Laptop, Earphone</p>
+            </div>
+            <button class="english" id="english" onclick="changedata(1)">English</button>
+            <div id="englishText">
+                <p id="englishHW">Earphone, smart watch</p>
+            </div>
+            <button class="french" id="french" onclick="changedata(2)">Franzoesisch</button>
+            <div id="frenchText">
+                <p id="frenchHW">Amazon, E-kart</p>
+            </div>
+            <button class="biology" id="biology" onclick="changedata(3)">Biologie</button>
+            <div id="biologyText">
+                <p id="biologyHW">Amazon, E-kart</p>
+            </div>
+            <button class="german" id="german" onclick="changedata(4)">Deutsch</button>
+            <div id="germanText">
+                <p id="germanHW">Amazon, E-kart</p>
+            </div>
+            <button class="history" id="history" onclick="changedata(5)">Geschichte</button>
+            <div id="historyText">
+                <p id="historyHW">Amazon, E-kart</p>
+            </div>
+            <button class="history-pt" id="history-pt" onclick="changedata(6)">PT Geschichte</button>
+            <div id="history-ptText">
+                <p id="history-ptHW">Amazon, E-kart</p>
+            </div>
+            <button class="music" id="music" onclick="changedata(7)">Musik</button>
+            <div id="musicText">
+                <p id="musicHW">Amazon, E-kart</p>
+            </div>
+            <button class="ethics" id="ethics" onclick="changedata(8)">Ethik</button>
+            <div id="ethicsText">
+                <p id="ethicsHW">Amazon, E-kart</p>
+            </div>
+            <button class="portuguese" id="portuguese" onclick="changedata(9)">Portiesisch</button>
+            <div id="portugueseText">
+                <p id="portugueseHW">Amazon, E-kart</p>
+            </div>
+            <button class="sport" id="sport" onclick="changedata(10)">Sport</button>
+            <div id="sportText">
+                <p id="sportHW">Amazon, E-kart</p>
+            </div>
+            <button class="geography" id="geography" onclick="changedata(11)">Geographie</button>
+            <div id="geographyText">
+                <p id="geographyHW">Amazon, E-kart</p>
+            </div>
+            <button class="chemestry" id="chemestry" onclick="changedata(12)">Chemie</button>
+            <div id="chemestryText">
+                <p id="chemestryHW">Amazon, E-kart</p>
+            </div>
+        </div>
 		<div class="app">
 			<div class="menu-toggle">
 				<div class="hamburger">
@@ -63,7 +120,47 @@
 				menu_toggle.classList.toggle("is-active");
 				sidebar.classList.toggle("is-active");
 			});
-
+            function changedata(parameter){
+            if(parameter==0){
+            document.getElementById('mathsText').classList.toggle('active');
+            }
+            else if(parameter==1){
+            document.getElementById('englishText').classList.toggle('active');
+            }
+            else if(parameter==2){
+            document.getElementById('frenchText').classList.toggle('active');
+            }
+            else if(parameter==3){
+            document.getElementById('biologyText').classList.toggle('active');
+            }
+            else if(parameter==4){
+            document.getElementById('germanText').classList.toggle('active');
+            }
+            else if(parameter==5){
+            document.getElementById('historyText').classList.toggle('active');
+            }
+            else if(parameter==6){
+            document.getElementById('history-ptText').classList.toggle('active');
+            }
+            else if(parameter==7){
+            document.getElementById('musicText').classList.toggle('active');
+            }
+            else if(parameter==8){
+            document.getElementById('ethicsText').classList.toggle('active');
+            }
+            else if(parameter==9){
+            document.getElementById('portugueseText').classList.toggle('active');
+            }
+            else if(parameter==10){
+            document.getElementById('sportText').classList.toggle('active');
+            }
+            else if(parameter==11){
+            document.getElementById('geographyText').classList.toggle('active');
+            }
+            else{
+            document.getElementById('chemestryText').classList.toggle('active');
+            }
+            }
 		</script>
 	</body>
 </html>
