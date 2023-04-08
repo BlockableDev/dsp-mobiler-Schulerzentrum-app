@@ -64,6 +64,7 @@
 	min-width: 205px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
+	border-radius: 15px;
 }
 
 /* Links inside the dropdown */
@@ -77,9 +78,23 @@
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
 	background-color: #ddd;
+	border-radius: 15px;
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {
 	display: block;
+}
+
+#maths {
+	background-color: orange;
+}
+#english {
+	background-color: #3498db;
+}
+#french {
+	background-color: rgb(202, 202, 77);
+}
+#biology {
+	background-color: green;
 }
