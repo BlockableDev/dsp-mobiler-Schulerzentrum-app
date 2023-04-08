@@ -6,66 +6,119 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>DSZ</title>
 		<link rel="stylesheet" href="../css/bottomNavBar.css" />
-        <link rel="stylesheet" href="../css/mainSidebar.css">
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/homework.css">
+		<link rel="stylesheet" href="../css/mainSidebar.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/homework.css" />
 	</head>
 	<body>
-        <div class="main">
-            <h1 class="main-heading">Hausaufgaben</h1>
-            <button class="maths" id="maths" onclick="changedata(0)">Mathe</button>
-            <div id="mathsText">
-                <p id="mathsHW">Laptop, Earphone</p>
-            </div>
-            <button class="english" id="english" onclick="changedata(1)">English</button>
-            <div id="englishText">
-                <p id="englishHW">Earphone, smart watch</p>
-            </div>
-            <button class="french" id="french" onclick="changedata(2)">Franzoesisch</button>
-            <div id="frenchText">
-                <p id="frenchHW">Amazon, E-kart</p>
-            </div>
-            <button class="biology" id="biology" onclick="changedata(3)">Biologie</button>
-            <div id="biologyText">
-                <p id="biologyHW">Amazon, E-kart</p>
-            </div>
-            <button class="german" id="german" onclick="changedata(4)">Deutsch</button>
-            <div id="germanText">
-                <p id="germanHW">Amazon, E-kart</p>
-            </div>
-            <button class="history" id="history" onclick="changedata(5)">Geschichte</button>
-            <div id="historyText">
-                <p id="historyHW">Amazon, E-kart</p>
-            </div>
-            <button class="history-pt" id="history-pt" onclick="changedata(6)">PT Geschichte</button>
-            <div id="history-ptText">
-                <p id="history-ptHW">Amazon, E-kart</p>
-            </div>
-            <button class="music" id="music" onclick="changedata(7)">Musik</button>
-            <div id="musicText">
-                <p id="musicHW">Amazon, E-kart</p>
-            </div>
-            <button class="ethics" id="ethics" onclick="changedata(8)">Ethik</button>
-            <div id="ethicsText">
-                <p id="ethicsHW">Amazon, E-kart</p>
-            </div>
-            <button class="portuguese" id="portuguese" onclick="changedata(9)">Portiesisch</button>
-            <div id="portugueseText">
-                <p id="portugueseHW">Amazon, E-kart</p>
-            </div>
-            <button class="sport" id="sport" onclick="changedata(10)">Sport</button>
-            <div id="sportText">
-                <p id="sportHW">Amazon, E-kart</p>
-            </div>
-            <button class="geography" id="geography" onclick="changedata(11)">Geographie</button>
-            <div id="geographyText">
-                <p id="geographyHW">Amazon, E-kart</p>
-            </div>
-            <button class="chemestry" id="chemestry" onclick="changedata(12)">Chemie</button>
-            <div id="chemestryText">
-                <p id="chemestryHW">Amazon, E-kart</p>
-            </div>
-        </div>
+		<div class="main">
+			<h1 class="main-heading">Hausaufgaben</h1>
+
+			<div class="dropdown">
+				<button class="dropbtn" id="maths" onclick="changedata(0)">
+					Mathe
+				</button>
+				<div id="mathsText" class="dropdown-content">
+					<a id="mathsHW">Laptop, Earphone</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="english" onclick="changedata(1)">
+					English
+				</button>
+				<div id="englishText" class="dropdown-content">
+					<a id="englishHW">Earphone, smart watch</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="french" onclick="changedata(2)">
+					Franzoesisch
+				</button>
+				<div id="frenchText" class="dropdown-content">
+					<a id="frenchHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="biology" onclick="changedata(3)">
+					Biologie
+				</button>
+				<div id="biologyText" class="dropdown-content">
+					<a id="biologyHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="german" onclick="changedata(4)">
+					Deutsch
+				</button>
+				<div id="germanText" class="dropdown-content">
+					<a id="germanHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="history" onclick="changedata(5)">
+					Geschichte
+				</button>
+				<div id="historyText" class="dropdown-content">
+					<a id="historyHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="history-pt" onclick="changedata(6)">
+					PT Geschichte
+				</button>
+				<div id="history-ptText" class="dropdown-content">
+					<a id="history-ptHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="music" onclick="changedata(7)">
+					Musik
+				</button>
+				<div id="musicText" class="dropdown-content">
+					<a id="musicHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="ethics" onclick="changedata(8)">
+					Ethik
+				</button>
+				<div id="ethicsText" class="dropdown-content">
+					<a id="ethicsHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="portuguese" onclick="changedata(9)">
+					Portiesisch
+				</button>
+				<div id="portugueseText" class="dropdown-content">
+					<a id="portugueseHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="sport" onclick="changedata(10)">
+					Sport
+				</button>
+				<div id="sportText" class="dropdown-content">
+					<a id="sportHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="geography" onclick="changedata(11)">
+					Geographie
+				</button>
+				<div id="geographyText" class="dropdown-content">
+					<a id="geographyHW">Amazon, E-kart</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" id="chemestry" onclick="changedata(12)">
+					Chemie
+				</button>
+				<div id="chemestryText" class="dropdown-content">
+					<a id="chemestryHW">Amazon, E-kart</a>
+				</div>
+			</div>
+		</div>
 		<div class="app">
 			<div class="menu-toggle">
 				<div class="hamburger">
@@ -87,29 +140,32 @@
 					<a href="https://www.dsporto.de/" class="menu-item">DSP Website</a>
 				</nav>
 			</aside>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<nav class="nav">
-  <a href="untisTimetable.html" class="nav__link">
-    <i class="material-icons nav__icon">dashboard</i>
-    <span class="nav__text">Stundenplan</span>
-  </a>
-  <a href="untisProfile.html" class="nav__link">
-    <i class="material-icons nav__icon">person</i>
-    <span class="nav__text">Profil</span>
-  </a>
-  <a href="untisInfos.html" class="nav__link">
-    <i class="material-icons nav__icon">book</i>
-    <span class="nav__text">Klassenbuch</span>
-  </a>
-  <a href="#" class="nav__link  nav__link--active">
-    <i class="material-icons nav__icon">home</i>
-    <span class="nav__text">Hausaufgaben</span>
-  </a>
-  <a href="untisSettings.html" class="nav__link">
-    <i class="material-icons nav__icon">settings</i>
-    <span class="nav__text">Einstellungen</span>
-  </a>
-</nav>
+			<link
+				href="https://fonts.googleapis.com/icon?family=Material+Icons"
+				rel="stylesheet"
+			/>
+			<nav class="nav">
+				<a href="untisTimetable.html" class="nav__link">
+					<i class="material-icons nav__icon">dashboard</i>
+					<span class="nav__text">Stundenplan</span>
+				</a>
+				<a href="untisProfile.html" class="nav__link">
+					<i class="material-icons nav__icon">person</i>
+					<span class="nav__text">Profil</span>
+				</a>
+				<a href="untisInfos.html" class="nav__link">
+					<i class="material-icons nav__icon">book</i>
+					<span class="nav__text">Klassenbuch</span>
+				</a>
+				<a href="#" class="nav__link nav__link--active">
+					<i class="material-icons nav__icon">home</i>
+					<span class="nav__text">Hausaufgaben</span>
+				</a>
+				<a href="untisSettings.html" class="nav__link">
+					<i class="material-icons nav__icon">settings</i>
+					<span class="nav__text">Einstellungen</span>
+				</a>
+			</nav>
 		</div>
 
 		<script>
@@ -120,47 +176,54 @@
 				menu_toggle.classList.toggle("is-active");
 				sidebar.classList.toggle("is-active");
 			});
-            function changedata(parameter){
-            if(parameter==0){
-            document.getElementById('mathsText').classList.toggle('active');
-            }
-            else if(parameter==1){
-            document.getElementById('englishText').classList.toggle('active');
-            }
-            else if(parameter==2){
-            document.getElementById('frenchText').classList.toggle('active');
-            }
-            else if(parameter==3){
-            document.getElementById('biologyText').classList.toggle('active');
-            }
-            else if(parameter==4){
-            document.getElementById('germanText').classList.toggle('active');
-            }
-            else if(parameter==5){
-            document.getElementById('historyText').classList.toggle('active');
-            }
-            else if(parameter==6){
-            document.getElementById('history-ptText').classList.toggle('active');
-            }
-            else if(parameter==7){
-            document.getElementById('musicText').classList.toggle('active');
-            }
-            else if(parameter==8){
-            document.getElementById('ethicsText').classList.toggle('active');
-            }
-            else if(parameter==9){
-            document.getElementById('portugueseText').classList.toggle('active');
-            }
-            else if(parameter==10){
-            document.getElementById('sportText').classList.toggle('active');
-            }
-            else if(parameter==11){
-            document.getElementById('geographyText').classList.toggle('active');
-            }
-            else{
-            document.getElementById('chemestryText').classList.toggle('active');
-            }
-            }
+			function changedata(parameter) {
+				if (parameter == 0) {
+					document.getElementById("mathsText").classList.toggle("show");
+				} else if (parameter == 1) {
+					document.getElementById("englishText").classList.toggle("show");
+				} else if (parameter == 2) {
+					document.getElementById("frenchText").classList.toggle("show");
+				} else if (parameter == 3) {
+					document.getElementById("biologyText").classList.toggle("show");
+				} else if (parameter == 4) {
+					document.getElementById("germanText").classList.toggle("show");
+				} else if (parameter == 5) {
+					document.getElementById("historyText").classList.toggle("show");
+				} else if (parameter == 6) {
+					document.getElementById("history-ptText").classList.toggle("show");
+				} else if (parameter == 7) {
+					document.getElementById("musicText").classList.toggle("show");
+				} else if (parameter == 8) {
+					document.getElementById("ethicsText").classList.toggle("show");
+				} else if (parameter == 9) {
+					document.getElementById("portugueseText").classList.toggle("show");
+				} else if (parameter == 10) {
+					document.getElementById("sportText").classList.toggle("show");
+				} else if (parameter == 11) {
+					document.getElementById("geographyText").classList.toggle("show");
+				} else {
+					document.getElementById("chemestryText").classList.toggle("show");
+				}
+			}
+			/* When the user clicks on the button,
+            toggle between hiding and showing the dropdown content */
+			function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			// Close the dropdown menu if the user clicks outside of it
+			window.onclick = function (event) {
+				if (!event.target.matches(".dropbtn")) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+						var openDropdown = dropdowns[i];
+						if (openDropdown.classList.contains("show")) {
+							openDropdown.classList.remove("show");
+						}
+					}
+				}
+			};
 		</script>
 	</body>
 </html>
