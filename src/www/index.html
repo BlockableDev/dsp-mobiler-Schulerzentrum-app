@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>DSZ</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="css/mainSidebar.css">
+		<link rel="stylesheet" href="css/mainSidebar.css" />
 	</head>
 	<body>
 		<div class="app">
@@ -32,8 +32,10 @@
 			</aside>
 
 			<main class="content">
-				<h1>Willkommen in deinen Schulerzentrum</h1>
-				<p>Alle deine schuliche Medien in eine App</p>
+				<div class="main-text">
+					<h1>Willkommen in deinen Schulerzentrum</h1>
+					<p>Alle deine schuliche Medien in eine App</p>
+				</div>
 				<div class="zentrumImages">
 					<a href="html/untisLogIn.html" class="untisLogo"
 						><img src="img/untisLogo.png" alt="Untis Logo"
@@ -48,7 +50,7 @@
 						<img src="img/dspLogo.jpeg" alt="DSP Logo" />
 					</a>
 					<button onclick="openTeams()" class="teamsLogo">
-						<img src="img/teamsLogo.png" alt="Microsoft Teams Logo">
+						<img src="img/teamsLogo.png" alt="Microsoft Teams Logo" />
 					</button>
 					<a href="html/studentMail" class="studentMail"></a>
 				</div>
@@ -66,10 +68,10 @@
 
 			// (I think) for this to work we need to execute in the console: cordova plugin add https://github.com/lampaa/com.lampa.startapp.git
 			function openTeams() {
-				if(navigator.startApp.check("com.microsoft.teams") == true) {
-				navigator.startApp.start("com.microsoft.teams")
+				if (navigator.startApp.check("com.microsoft.teams") == true) {
+					navigator.startApp.start("com.microsoft.teams");
 				} else {
-				window.location.href = "https://teams.microsoft.com/"
+					window.location.href = "https://teams.microsoft.com/";
 				}
 			}
 		</script>

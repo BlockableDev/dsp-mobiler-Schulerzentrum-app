@@ -29,7 +29,15 @@
 #chemestryText.active {
 	display: block;
 } */
-
+.sidebar {
+	min-width: 300px;
+}
+@media (max-width: 1024px) {
+	.sidebar {
+		max-width: 200px;
+		min-width: 200px;
+	}
+}
 /* Dropdown Button */
 .dropbtn {
 	background-color: #3498db;

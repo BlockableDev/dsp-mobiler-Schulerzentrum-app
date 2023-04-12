@@ -1,3 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.main-text {
+	width: 100%;
+}
 .zentrumImages {
 	display: flexbox;
 }
@@ -13,6 +20,7 @@
 	border-radius: 25px;
 	height: 205px;
 	width: 205px;
+	margin-top: 15px;
 }
 .dspLogo img {
 	margin-top: 15px;
@@ -20,11 +28,19 @@
 	width: 429px;
 }
 .teamsLogo {
-	border-radius: 15px;
+	background: none;
+	border: none;
+	margin-top: 15px;
+}
+.teamsLogo img {
+	height: 205px;
+	width: 205px;
+	border-radius: 25px;
 }
 .main {
 	padding: 32px;
 	font-family: "Roboto", sans-serif;
+	flex: auto;
 }
 .main h1.main-heading {
 	text-align: center;
@@ -34,6 +50,18 @@
 	border-bottom: 1px solid #eee;
 	padding-bottom: 8px;
 }
-button {
-	all: revert;
+
+@media (min-width: 360px) and (max-width: 768px) {
+	.dspLogo img {
+		width: fit-content;
+	}
+	.zentrumImages {
+		display: flex;
+		flex-direction: column;
+	}
+	.zentrumImages a img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

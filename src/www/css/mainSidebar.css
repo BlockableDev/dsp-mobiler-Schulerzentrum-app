@@ -67,6 +67,7 @@
 	max-width: 300px;
 	padding: 2rem 1rem;
 	background-color: #3d6e97;
+	min-height: 100vh;
 }
 
 .sidebar h3 {
@@ -100,13 +101,19 @@
 
 .content {
 	flex: 1 1 0;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 .content h1 {
 	color: #333;
 	font-size: 2.5rem;
 	margin-bottom: 1rem;
+}
+
+@media (min-width: 360px) {
+	.content h1 {
+		font-size: 2rem;
+	}
 }
 
 .content p {
@@ -134,6 +141,7 @@
 		width: 100%;
 		max-width: 300px;
 		transition: 0.2s linear;
+		z-index: 1;
 	}
 
 	.sidebar.is-active {
