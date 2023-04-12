@@ -49,7 +49,7 @@
 					<a href="https://www.dsporto.de/" class="dspLogo">
 						<img src="img/dspLogo.jpeg" alt="DSP Logo" />
 					</a>
-					<button onclick="openTeams()" class="teamsLogo">
+					<button onclick="teamsChecker()" class="teamsLogo">
 						<img src="img/teamsLogo.png" alt="Microsoft Teams Logo" />
 					</button>
 					<a href="html/studentMail" class="studentMail"></a>
@@ -71,7 +71,18 @@
 				if (navigator.startApp.check("com.microsoft.teams") == true) {
 					navigator.startApp.start("com.microsoft.teams");
 				} else {
-					window.location.href = "https://teams.microsoft.com/";
+					window.open("https://teams.microsoft.com/");
+				}
+			}
+			function teamsChecker() {
+				if (
+					/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+						navigator.userAgent
+					)
+				) {
+					openTeams();
+				} else {
+					window.open("https://teams.microsoft.com/");
 				}
 			}
 		</script>
