@@ -2,6 +2,9 @@
 	padding: 32px;
 	font-family: "Roboto", sans-serif;
 	flex: auto;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .table-container h2.table-heading {
