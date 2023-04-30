@@ -8,7 +8,7 @@ Welcome to the DSP School App, an all-in-one mobile application designed for stu
 - Microsoft teams sign-in: Open your Teams account in the web or native app version with our app.
 - Refined official school website: Access the most important information about the school, such as news and events, in a user-friendly format.
 
-##Note
+## Note
 As of now, the WebUntis integration in app is **not working**. The code and software all work as intended, but what causes this issue is something we cannot correct until **september 2023**. The problem occurs due to a core function needed for the usage of the WebUntis API in cordova not being enabled in the current WebUntis API version, we have gotten in contact with their support team and we have been lead to believe this error will be solved in the new upcoming version of the API, wich will be released in september this year. 
 
 ## Getting started
@@ -16,7 +16,7 @@ As of now, the WebUntis integration in app is **not working**. The code and soft
 2. Log in using your school credentials.
 3. Start using the app to access your class schedules, choose your cantine food, and stay updated on school news and events.
 
-##Future of the App
+## Future of the App
 We plan on adding many new features as time goes on in our app and have already started working on some of them, but we will only release them after the Jugendforscht competition has ended.
 Here is a list of all our upcoming features:
 - Full release on the Play Store for android devices after the new WebUntis API release.
