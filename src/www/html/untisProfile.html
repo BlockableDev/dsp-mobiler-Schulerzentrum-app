@@ -34,7 +34,10 @@
 			<div class="main">
 				<h1 class="main-heading">Profil</h1>
 				<p>Eingemeldet als: <var id="studentName">undefined</var></p>
-				<p>Aus der Klasse: <var id="studentClass">undefined</var></p>
+				<p id="class">
+					Aus der Klasse:
+					<var id="studentClass">d</var>
+				</p>
 			</div>
 			<link
 				href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -73,6 +76,10 @@
 				menu_toggle.classList.toggle("is-active");
 				sidebar.classList.toggle("is-active");
 			});
+			const megaKlasse = window.localStorage.getItem("kl");
+			document.getElementById("studentClass").innerHTML = megaKlasse;
+			const megaName = window.localStorage.getItem("username");
+			document.getElementById("studentName").innerHTML = megaName;
 		</script>
 	</body>
 </html>

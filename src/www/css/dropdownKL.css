@@ -45,6 +45,11 @@ button {
 	display: block;
 }
 
+button {
+	border: none;
+	background: none;
+}
+
 /* Change color of dropdown links on hover */
 .dropdown-contentKL a:hover {
 	background-color: #ddd;

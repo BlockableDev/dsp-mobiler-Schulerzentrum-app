@@ -9,6 +9,14 @@
 		<link rel="stylesheet" href="../css/mainSidebar.css" />
 		<link rel="stylesheet" href="../css/index.css" />
 		<link rel="stylesheet" href="../css/dropdownKL.css" />
+		<script>
+			const comando = window.localStorage.getItem("kl");
+			if (comando == undefined) {
+				console.log("banana");
+			} else {
+				window.location.href = "untisTimetable.html";
+			}
+		</script>
 	</head>
 	<body>
 		<div class="app">

@@ -33,7 +33,7 @@
 			</aside>
 			<div class="main">
 				<h1 class="main-heading">Klassenbuch</h1>
-				<p>Verspaetungen:<var id="lateNumber">undefined</var></p>
+				<p>Verspätungen:<var id="lateNumber">undefined</var></p>
 				<p>Abwesenheiten: <var id="abwesenNumber">undefined</var></p>
 			</div>
 			<link
@@ -72,6 +72,11 @@
 				menu_toggle.classList.toggle("is-active");
 				sidebar.classList.toggle("is-active");
 			});
+
+			const megaSpat = window.localStorage.getItem("verspatungen");
+			document.getElementById("lateNumber").innerHTML = megaSpat;
+			const megaAbwes = window.localStorage.getItem("abwesenheiten");
+			document.getElementById("abwesenNumber").innerHTML = megaAbwes;
 		</script>
 	</body>
 </html>

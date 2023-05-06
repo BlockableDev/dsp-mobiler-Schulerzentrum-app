@@ -33,6 +33,7 @@
 			</aside>
 			<div class="main">
 				<h1 class="main-heading">Einstellungen</h1>
+				<button class="logoutbtn" onclick="logOut()">Ausmelden</button>
 			</div>
 			<link
 				href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -70,6 +71,10 @@
 				menu_toggle.classList.toggle("is-active");
 				sidebar.classList.toggle("is-active");
 			});
+			function logOut() {
+				localStorage.removeItem("kl");
+				window.location.href = "untisSelectKA.html";
+			}
 		</script>
 	</body>
 </html>
