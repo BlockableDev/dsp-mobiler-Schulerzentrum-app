@@ -45,7 +45,7 @@
 	padding: 16px;
 	font-size: 16px;
 	border: none;
-	cursor: pointer;
+	cursor: pointer-º;
 	height: 205px;
 	width: 205px;
 	border-radius: 15px;
@@ -105,4 +105,12 @@
 }
 #biology {
 	background-color: green;
+}
+#german {
+	background-color: rgb(193, 20, 20);
+}
+#history {
+	background-color: lightseagreen;
+}
+#history-pt {
 }
