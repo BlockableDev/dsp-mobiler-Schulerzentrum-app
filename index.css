@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: #eee;
+}
+.main-text {
+  width: 100%;
+}
+.zentrumImages {
+  display: flexbox;
+}
+.untisLogo img {
+  margin-top: 15px;
+  margin-right: 15px;
+  border-radius: 25px;
+  height: 205px;
+  width: 205px;
+}
+.essenLogo img {
+  margin: 15 0 15px;
+  border-radius: 25px;
+  height: 205px;
+  width: 205px;
+  margin-top: 15px;
+}
+.dspLogo img {
+  margin-top: 15px;
+  border-radius: 25px;
+  width: 429px;
+}
+.teamsLogo {
+  background: none;
+  border: none;
+  margin-top: 15px;
+}
+.teamsLogo img {
+  height: 205px;
+  width: 205px;
+  border-radius: 25px;
+}
+.main {
+  padding: 32px;
+  font-family: "Roboto", sans-serif;
+  flex: auto;
+}
+.main h1.main-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+  .dspLogo img {
+    width: fit-content;
+  }
+  .zentrumImages {
+    display: flex;
+    flex-direction: column;
+  }
+  .zentrumImages a img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logoutbtn {
+  padding: 10px;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+}
