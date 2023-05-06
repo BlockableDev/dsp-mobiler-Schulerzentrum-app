@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>DSZ</title>
+	<link rel="stylesheet" href="../css/bottomNavBar.css" />
+	<link rel="stylesheet" href="../css/mainSidebar.css" />
+	<link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+	<div class="app">
+		<div class="menu-toggle">
+			<div class="hamburger">
+				<span></span>
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<h3>Menu</h3>
+
+			<nav class="menu">
+				<a href="../index.html" class="menu-item">Zentrum</a>
+				<a href="#" class="menu-item is-active">Untis</a>
+				<a href="https://dsporto.unicard.pt/UnicardSIGE_Portal" class="menu-item">Kantine</a>
+				<a href="https://www.dsporto.de/" class="menu-item">DSP Website</a>
+			</nav>
+		</aside>
+		<div class="main">
+			<h1 class="main-heading">Klassenbuch</h1>
+			<p>Verspätungen:<var id="lateNumber">undefined</var></p>
+			<p>Abwesenheiten: <var id="abwesenNumber">undefined</var></p>
+		</div>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<nav class="nav">
+			<a href="untisTimetable.html" class="nav__link">
+				<i class="material-icons nav__icon">dashboard</i>
+				<span class="nav__text">Stundenplan</span>
+			</a>
+			<a href="untisProfile.html" class="nav__link">
+				<i class="material-icons nav__icon">person</i>
+				<span class="nav__text">Profil</span>
+			</a>
+			<a href="#" class="nav__link nav__link--active">
+				<i class="material-icons nav__icon">book</i>
+				<span class="nav__text">Klassenbuch</span>
+			</a>
+			<a href="untisHomework.html" class="nav__link">
+				<i class="material-icons nav__icon">home</i>
+				<span class="nav__text">Hausaufgaben</span>
+			</a>
+			<a href="untisSettings.html" class="nav__link">
+				<i class="material-icons nav__icon">settings</i>
+				<span class="nav__text">Einstellungen</span>
+			</a>
+		</nav>
+	</div>
+
+	<script>
+		const menu_toggle = document.querySelector(".menu-toggle");
+		const sidebar = document.querySelector(".sidebar");
+
+		menu_toggle.addEventListener("click", () =>
+		{
+			menu_toggle.classList.toggle("is-active");
+			sidebar.classList.toggle("is-active");
+		});
+
+		const megaSpat = window.localStorage.getItem("verspatungen");
+		document.getElementById("lateNumber").innerHTML = megaSpat;
+		const megaAbwes = window.localStorage.getItem("abwesenheiten");
+		document.getElementById("abwesenNumber").innerHTML = megaAbwes;
+	</script>
+</body>
+
+</html>
