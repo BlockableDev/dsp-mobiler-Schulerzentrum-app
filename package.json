@@ -1,0 +1,30 @@
+{
+  "name": "io.cordova.hellocordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "type": "module",
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "9.1",
+    "webpack-cli": "^5.0.2"
+  },
+  "cordova": {
+    "platforms": []
+  },
+  "dependencies": {
+    "cordova": "^11.1.0",
+    "moment": "^2.29.4",
+    "webpack": "^5.81.0",
+    "webuntis": "^2.0.3"
+  }
+}
