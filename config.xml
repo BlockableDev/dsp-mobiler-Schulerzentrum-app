@@ -1,14 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>DSZ</name>
+<<<<<<< Updated upstream
     <description>App for Schuelerexperimentieren 2022/23</description>
+=======
+    <description>DSZ Mega Epishe App</description>
+>>>>>>> Stashed changes
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+        Leonardo und Rodrigo Team
     </author>
+<<<<<<< Updated upstream
   <content src="index.html"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <icon src="www\img\logo.png" platform="android" width="64" height="64" density="mdpi" />
   <preference name="webviewbounce" value="false" />
   <preference name="DisallowOverscroll" value="true" />
+=======
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <preference name="hostname" value="localhost" />
+    <preference name="android-api-level" value="android-33" />
+    <preference name="AndroidInsecureFileModeEnabled" value="true" />
+    <icon density="mdpi" height="64" src="www\img\logo.png" width="64" />
+>>>>>>> Stashed changes
 </widget>
